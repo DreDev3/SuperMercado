@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SuperMercado/static/css/main.e3452bd1.css",
-    "main.js": "/SuperMercado/static/js/main.8beab6d7.js",
+    "main.js": "/SuperMercado/static/js/main.92069b0d.js",
     "static/media/mastercard.png": "/SuperMercado/static/media/mastercard.33c8328328d3138cd38a.png",
     "static/media/subir.png": "/SuperMercado/static/media/subir.7d1b46624e1a065f3181.png",
     "static/media/logo-loja.png": "/SuperMercado/static/media/logo-loja.9cf2c5afe9b546f9a60f.png",
@@ -11,10 +11,10 @@
     "static/media/alelo.png": "/SuperMercado/static/media/alelo.e103b130a463e1c19fbf.png",
     "index.html": "/SuperMercado/index.html",
     "main.e3452bd1.css.map": "/SuperMercado/static/css/main.e3452bd1.css.map",
-    "main.8beab6d7.js.map": "/SuperMercado/static/js/main.8beab6d7.js.map"
+    "main.92069b0d.js.map": "/SuperMercado/static/js/main.92069b0d.js.map"
   },
   "entrypoints": [
     "static/css/main.e3452bd1.css",
-    "static/js/main.8beab6d7.js"
+    "static/js/main.92069b0d.js"
   ]
 }
