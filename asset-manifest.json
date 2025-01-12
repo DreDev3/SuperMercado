@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/SuperMercado/static/css/main.e3452bd1.css",
-    "main.js": "/SuperMercado/static/js/main.b2c63997.js",
-    "static/media/mastercard.png": "/SuperMercado/static/media/mastercard.33c8328328d3138cd38a.png",
-    "static/media/subir.png": "/SuperMercado/static/media/subir.7d1b46624e1a065f3181.png",
-    "static/media/textura.jpg": "/SuperMercado/static/media/textura.d37656724a9e158992cd.jpg",
-    "static/media/sodexo.png": "/SuperMercado/static/media/sodexo.8f652003fa0e31e43bb8.png",
-    "static/media/visa.png": "/SuperMercado/static/media/visa.0bb05c7bd6d626967ee7.png",
-    "static/media/hipercard.png": "/SuperMercado/static/media/hipercard.828ffea0c25a5e5fc47b.png",
-    "static/media/alelo.png": "/SuperMercado/static/media/alelo.e103b130a463e1c19fbf.png",
-    "index.html": "/SuperMercado/index.html",
-    "main.e3452bd1.css.map": "/SuperMercado/static/css/main.e3452bd1.css.map",
-    "main.b2c63997.js.map": "/SuperMercado/static/js/main.b2c63997.js.map"
+    "main.css": "/static/css/main.e3452bd1.css",
+    "main.js": "/static/js/main.3debf859.js",
+    "static/media/mastercard.png": "/static/media/mastercard.33c8328328d3138cd38a.png",
+    "static/media/subir.png": "/static/media/subir.7d1b46624e1a065f3181.png",
+    "static/media/sodexo.png": "/static/media/sodexo.8f652003fa0e31e43bb8.png",
+    "static/media/visa.png": "/static/media/visa.0bb05c7bd6d626967ee7.png",
+    "static/media/hipercard.png": "/static/media/hipercard.828ffea0c25a5e5fc47b.png",
+    "static/media/alelo.png": "/static/media/alelo.e103b130a463e1c19fbf.png",
+    "index.html": "/index.html",
+    "main.e3452bd1.css.map": "/static/css/main.e3452bd1.css.map",
+    "main.3debf859.js.map": "/static/js/main.3debf859.js.map"
   },
   "entrypoints": [
     "static/css/main.e3452bd1.css",
-    "static/js/main.b2c63997.js"
+    "static/js/main.3debf859.js"
   ]
 }
