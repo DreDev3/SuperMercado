@@ -51,9 +51,9 @@ export default function Header() {
               <li><HashLink to={generateLink('limpeza-casa')}>Limpeza Casa</HashLink></li>
             </SubMenu>
           </MenuItem>
-          <li><Link to="/receitas" class="recipe">Receitas</Link></li>
-          <li><Link to="/pages/lojas.html" class="store">Nossas Lojas</Link></li>
-          <li><Link to="#" class="contact">Contatos</Link></li>
+{/*           <li><Link to="/receitas" class="recipe">Receitas</Link></li>
+ */}          <li><Link to="/nossas-lojas" class="store">Nossas Lojas</Link></li>
+          <li><Link to="/contato" class="contact">Contatos</Link></li>
         </ul>
       </nav>
     </HeaderGlobal>

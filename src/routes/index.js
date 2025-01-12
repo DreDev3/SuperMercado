@@ -5,7 +5,8 @@ import Home from '../pages/Home';
 import Page404 from '../pages/Page404';
 import MyRoute from './MyRoute';
 import Setores from '../pages/Secoes';
-import Receitas from '../pages/Receitas';
+import NossasLojas from '../pages/NossasLojas';
+import Contato from '../pages/Contato';
 
 export default function Routess() {
   return (
@@ -16,7 +17,8 @@ export default function Routess() {
       <Route element={<MyRoute /* isClosed */ />}>
         <Route path='/' element={<Home />} />
         <Route path='/setores' element={<Setores />} />
-        <Route path='/receitas' element={<Receitas />} />
+        <Route path='/nossas-lojas' element={<NossasLojas />} />
+        <Route path='/contato' element={<Contato />} />
       </Route>
     </Routes>
   );

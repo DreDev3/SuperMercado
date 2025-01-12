@@ -41,7 +41,6 @@ export const HeaderGlobal = styled.header`
     width: 95%;
     display: flex;
     justify-content: space-around;
-    font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     list-style: none;
     margin-top: 50px;

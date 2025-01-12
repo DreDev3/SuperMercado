@@ -6,41 +6,46 @@ import produto from '../../images/produto.png';
 import add from '../../images/mais.png';
 import remove from '../../images/menos.png';
 import axios from '../../services/axios';
+import Loading from '../../components/Loading';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     async function getData() {
+      setIsLoading(true);
       const response = await axios.get('/products');
       setProducts(response.data);
+      setIsLoading(false);
     }
 
     getData();
   }, []);
   return (
     <Container>
+      <Loading isLoading={isLoading} />
       <Main className="homeContent">
         <h1>Promoções</h1>
         <div className="date">00/00/0000 até 00/00/0000</div>
         <div className="offer">
-        {products.map(product => (
-          <div key={product.id} className="product">
-            <img src={produto} alt={product.title} />
-            <h4 className='title'>{product.title}</h4>
-            {/* <h6 className='description'>{product.description}</h6> */}
-            <h6>R${product.price}</h6>
-            <div className="purchase">
-              <div className="more">
-                <img src={add} alt="adicionar" />
-              </div>
+          {products.map(product => (
+            <div key={product.id} className="product">
+              <img src={produto} alt={product.title} />
+              <h4 className='title'>{product.title}</h4>
+              {/* <h6 className='description'>{product.description}</h6> */}
+              <h6>R${product.price}</h6>
+              <div className="purchase">
+                <div className="more">
+                  <img src={add} alt="adicionar" />
+                </div>
 
-              <div className="less">
-                <img src={remove} alt="remover" />
+                <div className="less">
+                  <img src={remove} alt="remover" />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </Main>
     </Container>
