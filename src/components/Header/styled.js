@@ -5,6 +5,7 @@ import * as colors from '../../config/colors';
 export const HeaderGlobal = styled.header`
   background-color: ${colors.primaryColor};
   position: relative;
+  width: 100%;
 
   .logo {
     width: 150px;
@@ -36,7 +37,8 @@ export const HeaderGlobal = styled.header`
     text-align: center;
 }
 
-  ul {
+  .menu {
+    width: 95%;
     display: flex;
     justify-content: space-around;
     font-family: 'Ubuntu', sans-serif;
@@ -86,6 +88,7 @@ export const SubMenu = styled.ul`
     width: 200px;
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
     background-color: ${colors.secondColor};
     box-shadow: 0 20px 45px #00000020;
     list-style-type: none;
@@ -102,6 +105,7 @@ export const SubMenu = styled.ul`
     li {
         padding: 5px 20px;
         cursor: pointer;
+        text-align: left;
 
         &:hover {
             background-color: ${colors.primaryColor};

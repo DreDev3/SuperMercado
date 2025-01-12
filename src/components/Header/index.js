@@ -33,7 +33,7 @@ export default function Header() {
         <FaStore color='#fff' size={24} />
       </div>
       <nav>
-        <ul>
+        <ul className='menu'>
           <li><Link to="/" class="home">Início</Link></li>
           <MenuItem
             onMouseEnter={handleMouseEnter}

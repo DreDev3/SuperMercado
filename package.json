@@ -2,7 +2,7 @@
   "name": "react-base",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DreDev3.github.io/",
+  "homepage": "https://DreDev3.github.io/SuperMercado",
   "dependencies": {
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
