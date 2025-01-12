@@ -58,11 +58,6 @@ export const Image = styled.img`
     width: 100%;
     height: auto;
   }
-
-  @media (max-width: 480px) {
-    width: 30%;
-    height: auto;
-  }
 `;
 
 export const Title = styled.h1`
