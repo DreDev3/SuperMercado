@@ -2,7 +2,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 import 'react-toastify/ReactToastify.css';
 
 import * as colors from '../config/colors';
-import textura from '../images/textura.jpg';
 
 export default createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
@@ -18,7 +17,7 @@ body {
 //   background: ${colors.primaryDarkColor};
   color: ${colors.primaryDarkColor};
   font-family: 'Ubuntu', sans-serif;
-  background-image: url(${textura});
+  background: #fff;
 }
 
 html, body, #root{

@@ -40,7 +40,7 @@ export const HeaderGlobal = styled.header`
     display: flex;
     justify-content: space-around;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 14pt;
+    font-size: 18px;
     list-style: none;
     margin-top: 50px;
   }
@@ -48,6 +48,7 @@ export const HeaderGlobal = styled.header`
     li {
     /* width: 100%; */
     padding: 8px;
+    text-align: center;
 }
 
 li a {
