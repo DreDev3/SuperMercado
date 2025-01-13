@@ -13,15 +13,6 @@ export const Main = styled.main`
     font-size: 26pt;
 }
 
-.date {
-    position: relative;
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    color: #7aeb4a;
-    font-weight: bold;
-}
-
 .offer {
   display: flex;
   gap: 30px;
@@ -61,11 +52,6 @@ export const Main = styled.main`
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
-}
-
-.product .description {
-  font-size: 13px;
-  overflow: hidden;
 }
 
 .purchase {

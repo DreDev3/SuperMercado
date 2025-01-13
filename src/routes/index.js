@@ -7,6 +7,7 @@ import MyRoute from './MyRoute';
 import Setores from '../pages/Secoes';
 import NossasLojas from '../pages/NossasLojas';
 import Contato from '../pages/Contato';
+import { Cart } from '../components/Cart';
 
 export default function Routess() {
   return (
@@ -19,6 +20,7 @@ export default function Routess() {
         <Route path='/setores' element={<Setores />} />
         <Route path='/nossas-lojas' element={<NossasLojas />} />
         <Route path='/contato' element={<Contato />} />
+        <Route path='/carrinho' element={<Cart />} />
       </Route>
     </Routes>
   );

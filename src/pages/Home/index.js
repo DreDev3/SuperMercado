@@ -7,20 +7,28 @@ import add from '../../images/mais.png';
 import remove from '../../images/menos.png';
 import axios from '../../services/axios';
 import Loading from '../../components/Loading';
+import { useCart } from '../../services/CartContext';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+  const { addToCart } = useCart();
+  const { removeFromCart } = useCart();
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    async function getData() {
-      setIsLoading(true);
-      const response = await axios.get('/products');
-      setProducts(response.data);
-      setIsLoading(false);
+    try {
+      async function getData() {
+        setIsLoading(true);
+        const response = await axios.get('/products');
+        setProducts(response.data);
+        setIsLoading(false);
+      }
+      getData();
+    } catch (err) {
+      console.log(err);
     }
 
-    getData();
+
   }, []);
   return (
     <Container>
@@ -36,11 +44,11 @@ export default function Home() {
               {/* <h6 className='description'>{product.description}</h6> */}
               <h6>R${product.price}</h6>
               <div className="purchase">
-                <div className="more">
+                <div className="more" onClick={() => addToCart(product)}>
                   <img src={add} alt="adicionar" />
                 </div>
 
-                <div className="less">
+                <div className="less" onClick={() => removeFromCart(product.id)}>
                   <img src={remove} alt="remover" />
                 </div>
               </div>

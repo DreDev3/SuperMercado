@@ -21,20 +21,23 @@ export const HeaderGlobal = styled.header`
 
 .carrinho {
     position: absolute;
-    right: 22px;
+    right: 30px;
     top: 10px;
     cursor: pointer;
 }
 
 .notify {
    position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin: -8px 25px;
     background-color: ${colors.secondColor};
     color: #fff;
     border-radius: 50%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
 }
 
   .menu {

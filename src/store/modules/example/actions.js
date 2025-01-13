@@ -1,19 +1,22 @@
 import * as types from '../types';
 
-export function clicaBotaoRequest() {
+export function cartAdd(product) {
 return {
-  type: types.BOTAO_CLICADO_REQUEST,
+  type: types.CART_ADD,
+  payload: product,
 };
 }
 
-export function clicaBotaoSuccess() {
+export function cartRemove(productId) {
   return {
-    type: types.BOTAO_CLICADO_SUCCESS,
+    type: types.CART_REMOVE,
+    payload: productId,
   };
   }
 
-  export function clicaBotaoFailure() {
+  export function cartSet(cart) {
     return {
-      type: types.BOTAO_CLICADO_FAIL,
+      type: types.CART_SET,
+      payload: cart,
     };
     }
