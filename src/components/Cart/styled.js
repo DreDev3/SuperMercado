@@ -39,12 +39,10 @@ export const Main = styled.main`
 
 .product h4{
   font-size: 17px;
-  color: ${colors.primaryColor};
 }
 
 .product h6 {
     font-size: 17px;
-    color: ${colors.secondColor};
 }
 
 .product .title {
@@ -75,3 +73,11 @@ export const Main = styled.main`
 }
 `;
 
+export const Button = styled.button`
+  display: block;
+  background: ${colors.secondColor};
+  margin: 50px auto;
+  width: 200px;
+  height: 60px;
+  font-size: 18px;
+`;

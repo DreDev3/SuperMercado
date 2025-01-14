@@ -34,13 +34,11 @@ export const Main = styled.main`
 
 .product h4{
     font-size: 14pt;
-    color: ${colors.primaryColor};
     /* flex-wrap: wrap; */
 }
 
 .product h6 {
     font-size: 13pt;
-    color: ${colors.secondColor};
 }
 
 .purchase {

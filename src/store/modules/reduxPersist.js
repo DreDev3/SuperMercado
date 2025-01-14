@@ -4,9 +4,9 @@ import { persistReducer } from 'redux-persist';
 export default reducers => {
   const persistedReducers = persistReducer(
     {
-      key: 'APP-MERCADO', // Chave que será usada no localStorage
-      storage, // Utiliza o localStorage
-      whitelist: ['cart'], // Apenas o estado 'cart' será persistido
+      key: 'APP-MERCADO',
+      storage,
+      whitelist: ['cart'],
     },
     reducers
   );

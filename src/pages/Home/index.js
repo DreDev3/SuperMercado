@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { Container } from '../../styles/GlobalStyles';
 import { Main } from './styled';
@@ -7,13 +8,20 @@ import add from '../../images/mais.png';
 import remove from '../../images/menos.png';
 import axios from '../../services/axios';
 import Loading from '../../components/Loading';
-import { useCart } from '../../services/CartContext';
+import * as actions from '../../store/modules/example/actions';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-  const { addToCart } = useCart();
-  const { removeFromCart } = useCart();
   const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
+
+    const handleAddToCart = (product) => {
+      dispatch(actions.cartAdd(product));
+    };
+
+    const handleRemoveFromCart = (productId) => {
+      dispatch(actions.cartRemove(productId));
+    };
 
   useEffect(() => {
     try {
@@ -44,11 +52,11 @@ export default function Home() {
               {/* <h6 className='description'>{product.description}</h6> */}
               <h6>R${product.price}</h6>
               <div className="purchase">
-                <div className="more" onClick={() => addToCart(product)}>
+                <div className="more" onClick={() => handleAddToCart(product)}>
                   <img src={add} alt="adicionar" />
                 </div>
 
-                <div className="less" onClick={() => removeFromCart(product.id)}>
+                <div className="less" onClick={() => handleRemoveFromCart(product.id)}>
                   <img src={remove} alt="remover" />
                 </div>
               </div>

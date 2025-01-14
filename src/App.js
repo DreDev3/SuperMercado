@@ -10,20 +10,17 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Routes from './routes';
 import store, { persistor } from './store';
-import { CartProvider } from './services/CartContext';
 
 function App() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <HistoryRouter history={history}>
-          <CartProvider>
-            <Header />
-            <Routes />
-            <Footer />
-            <GlobalStyles />
-            <ToastContainer autoClose={3000} className="teast-container" />
-          </CartProvider>
+          <Header />
+          <Routes />
+          <Footer />
+          <GlobalStyles />
+          <ToastContainer autoClose={3000} className="teast-container" />
         </HistoryRouter>
       </PersistGate>
     </Provider>

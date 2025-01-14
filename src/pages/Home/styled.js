@@ -48,12 +48,10 @@ export const Main = styled.main`
 
 .product h4{
   font-size: 17px;
-  color: ${colors.primaryColor};
 }
 
 .product h6 {
     font-size: 17px;
-    color: ${colors.secondColor};
 }
 
 .product .title {

@@ -4,13 +4,15 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { HeaderGlobal, SubMenu, MenuItem } from './styled';
 import { HashLink } from 'react-router-hash-link';
-import { useCart } from '../../services/CartContext';
+import { useSelector } from 'react-redux';
 
 export default function Header() {
   const location = useLocation();
   const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
-  const { totalItems } = useCart();
-  console.log(totalItems);
+  const totalItems = useSelector(state =>
+    state.cart?.cart?.reduce((total, item) => total + item.quantity, 0) || 0
+  );
+
 
   const handleMouseEnter = () => {
     setIsSubMenuVisible(true);

@@ -1,14 +1,33 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
-import { useCart } from '../../services/CartContext';
 import { Container } from '../../styles/GlobalStyles';
 import produto from '../../images/produto.png';
 import add from '../../images/mais.png';
 import remove from '../../images/menos.png';
-import { Main } from './styled';
+import { Button, Main } from './styled';
+import * as actions from '../../store/modules/example/actions';
 
 export const Cart = () => {
-  const { cart, addToCart, removeFromCart } = useCart();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const cart = useSelector(state => state.cart.cart) || [];
+
+  const handleAddToCart = (product) => {
+    dispatch(actions.cartAdd(product));
+  };
+
+  const handleRemoveFromCart = (productId) => {
+    dispatch(actions.cartRemove(productId));
+  };
+
+  const handleSubmit = () => {
+    toast.success('Sua compra foi finalizada com sucesso.');
+    dispatch(actions.cartClear());
+    navigate('/');
+  };
 
   if (!Array.isArray(cart)) {
     return <p>Erro: cart não é um array.</p>;
@@ -30,11 +49,11 @@ export const Cart = () => {
                     <h4 className='title'>{item.title}</h4>
                     <h6>R${item.price}</h6>
                     <div className="purchase">
-                      <div className="more" onClick={() => addToCart(item)}>
+                      <div className="more" onClick={() => handleAddToCart(item)}>
                         <img src={add} alt="adicionar" />
                       </div>
                       <div className='quant'>{item.quantity}</div>
-                      <div className="less" onClick={() => removeFromCart(item.id)}>
+                      <div className="less" onClick={() => handleRemoveFromCart(item.id)}>
                         <img src={remove} alt="remover" />
                       </div>
                     </div>
@@ -44,6 +63,7 @@ export const Cart = () => {
             })
           )}
         </div>
+        {cart.length > 0 ? <Button type='submit' onClick={handleSubmit}>Finalizar compra</Button> : ''}
       </Main>
     </Container>
   );
